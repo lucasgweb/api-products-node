@@ -22,7 +22,7 @@ export class ProductValidator {
     description: Joi.string().required(),
     calcType: Joi.string().max(20).required(),
     shortDescription: Joi.string().max(100).required(),
-    status: Joi.string().valid('active', 'inactive'),
+    isDeleted: Joi.boolean(),
   });
 
   public validate(data: Product): string | boolean {
